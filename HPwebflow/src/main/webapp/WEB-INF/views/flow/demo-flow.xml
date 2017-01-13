@@ -1,0 +1,21 @@
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+	http://www.springframework.org/schema/webflow/spring-webflow.xsd">
+	
+<view-state id="page1state"	view="Page1.jsp">
+<transition on="moveToPage2" to="page2state"></transition>
+</view-state>
+	
+<view-state id="page2state" view="Page2.jsp">
+<transition on="moveToPage3" to="page3state"></transition>
+<transition on="moveToPage1" to="page1state"></transition>
+</view-state>
+	
+<view-state id="page3state" view="Page3.jsp">
+<transition on="moveToPage2" to="page2state"></transition>
+</view-state>
+	
+	
+	
+</flow>
